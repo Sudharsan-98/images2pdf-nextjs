@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gray-50">
       <Head>
         <title>All-in-One PDF Tools – Convert, Merge, Compress, and More | images2pdf.online</title>
         <meta name="description" content="Free online PDF tools to convert images to PDF, PDF to Word, compress PDF, merge, split, unlock & protect your files. No watermark, fast & secure." />
