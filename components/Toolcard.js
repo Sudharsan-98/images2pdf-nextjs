@@ -1,12 +1,10 @@
-import React from 'react';
-
 export default function ToolCard({ tool }) {
   const colorClasses = {
     blue: 'bg-blue-600 hover:bg-blue-700',
     indigo: 'bg-indigo-600 hover:bg-indigo-700',
     green: 'bg-green-600 hover:bg-green-700',
     purple: 'bg-purple-600 hover:bg-purple-700'
-  };
+  }
 
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:transform hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
@@ -20,9 +18,9 @@ export default function ToolCard({ tool }) {
           href={tool.link} 
           className={`w-full block ${colorClasses[tool.color]} text-white font-medium py-2 px-4 rounded-lg transition-colors text-center`}
         >
-          {tool.actionText || 'Use Tool'}
+          {tool.id.includes('compress') ? 'Compress Now' : 'Convert Now'}
         </a>
       </div>
     </div>
-  );
+  )
 }
