@@ -1,4 +1,6 @@
+// components/Header.js
 import Link from 'next/link';
+
 export default function Header() {
   return (
     <header className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
