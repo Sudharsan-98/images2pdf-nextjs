@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import { useEffect } from 'react'
-import dynamic from 'next/dynamic' // For potential SSR issues
+import dynamic from 'next/dynamic'
 
-// Optionally load components dynamically if needed
+// Dynamically load components to prevent SSR issues
 const Header = dynamic(() => import('../components/Header'))
 const ToolsSection = dynamic(() => import('../components/ToolsSection'))
 const SEOContent = dynamic(() => import('../components/SEOContent'))
@@ -10,13 +10,11 @@ const Footer = dynamic(() => import('../components/Footer'))
 
 export default function Home() {
   useEffect(() => {
-    // Load feather icons more reliably
     const loadFeatherIcons = async () => {
       if (typeof window !== 'undefined') {
         const feather = await import('feather-icons')
         feather.replace()
-        // Re-run after 1s in case dynamic content loads late
-        setTimeout(feather.replace, 1000)
+        setTimeout(feather.replace, 1000) // Re-run for dynamic content
       }
     }
     loadFeatherIcons()
