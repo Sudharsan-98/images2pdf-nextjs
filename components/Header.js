@@ -1,3 +1,4 @@
+import Link from 'next/link';
 export default function Header() {
   return (
     <header className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
@@ -15,9 +16,9 @@ export default function Header() {
           </div>
           <nav>
             <ul className="flex space-x-6">
-              <li><a href="#" className="hover:text-blue-200 transition-colors">Home</a></li>
-              <li><a href="#tools" className="hover:text-blue-200 transition-colors">Tools</a></li>
-              <li><a href="#" className="hover:text-blue-200 transition-colors">Help</a></li>
+              <li><Link href="#" className="hover:text-blue-200 transition-colors">Home</Link></li>
+              <li><Link href="#tools" className="hover:text-blue-200 transition-colors">Tools</Link></li>
+              <li><Link href="#" className="hover:text-blue-200 transition-colors">Help</Link></li>
             </ul>
           </nav>
         </div>
@@ -27,5 +28,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }
